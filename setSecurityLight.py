@@ -25,7 +25,7 @@ offTimeWE = datetime.time(23,59)
 
 cron  = CronTab(user=True)
 
-city_name = 'Manchester'
+city_name = 'London'
 a = Astral()
 a.solar_depression = 'civil'
 city = a[city_name]

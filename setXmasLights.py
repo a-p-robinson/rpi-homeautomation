@@ -25,7 +25,7 @@ offTimeWE = datetime.time(23,59)
 
 cron  = CronTab(user=True)
 
-city_name = 'Manchester'
+city_name = 'London'
 a = Astral()
 a.solar_depression = 'civil'
 city = a[city_name]
@@ -49,12 +49,12 @@ for date in datetime_range(start, end):
     # Check if date is a weekend
     if date.weekday() < 5:
         on_jobAM.hour.on(sun['dawn'].hour)
-        on_jobAM.minute.on(sun['dawn'].minute - 2)
+        on_jobAM.minute.on(sun['dawn'].minute)
         off_jobAM.hour.on(sun['dawn'].hour + 2)
-        off_jobAM.minute.on(sun['dawn'].minute - 2)
+        off_jobAM.minute.on(sun['dawn'].minute)
        
         on_jobPM.hour.on(sun['sunset'].hour)
-        on_jobPM.minute.on(sun['sunset'].minute - 2)
+        on_jobPM.minute.on(sun['sunset'].minute)
         off_jobPM.hour.on(offTimePM.hour)
         off_jobPM.minute.on(offTimePM.minute - randint(0,15))
 
