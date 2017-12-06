@@ -49,19 +49,19 @@ for date in datetime_range(start, end):
     # Check if date is a weekend
     if date.weekday() < 5:
         on_jobAM.hour.on(sun['dawn'].hour)
-        on_jobAM.minute.on(sun['dawn'].minute)
+        on_jobAM.minute.on(sun['dawn'].minute -2)
         off_jobAM.hour.on(sun['dawn'].hour + 2)
         off_jobAM.minute.on(sun['dawn'].minute)
        
         on_jobPM.hour.on(sun['sunset'].hour)
-        on_jobPM.minute.on(sun['sunset'].minute)
+        on_jobPM.minute.on(sun['sunset'].minute -2)
         off_jobPM.hour.on(offTimePM.hour)
         off_jobPM.minute.on(offTimePM.minute - randint(0,15))
 
     else:
         print " WEEKEND:"
         on_jobAM.hour.on(sun['dawn'].hour + 3)
-        on_jobAM.minute.on(sun['dawn'].minute - 2)
+        on_jobAM.minute.on(sun['dawn'].minute - 4)
         off_jobPM.hour.on(offTimeWE.hour)
         off_jobPM.minute.on(offTimeWE.minute - randint(0,15))
 
