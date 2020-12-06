@@ -2,7 +2,7 @@
 
 from gpiozero import Energenie
 
-lamp = Energenie(1)
+lamp = Energenie(2)
 lamp.on()
 
 print("Lamp is {}".format(lamp.socket))
