@@ -3,6 +3,6 @@
 from gpiozero import Energenie
 
 lamp = Energenie(2)
-lamp.on()
+lamp.off()
 
 print("Lamp is {}".format(lamp.socket))
