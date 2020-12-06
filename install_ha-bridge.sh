@@ -2,6 +2,10 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+# Required packages
+sudo apt update
+sudp apt install -y default-jdk
+
 # Check if the install directory exists and make it if it doesn't
 if [ ! -d "/opt/ha-bridge" ]; then
   sudo mkdir /opt/ha-bridge
@@ -21,3 +25,4 @@ sudo cp $DIR/config/ha-bridge.service /etc/systemd/system/
 sudo systemctl daemon-reload
 sudo systemctl start ha-bridge.service
 sudo systemctl enable ha-bridge.service
+

@@ -6,7 +6,7 @@ After=network.target
 [Service]
 Type=simple
 
-WorkingDirectory=/opt//ha-bridgge
+WorkingDirectory=/opt//ha-bridge
 ExecStart=/usr/bin/java -jar -Dconfig.file=/opt/ha-bridge/data/habridge.config /opt/ha-bridge/ha-bridge.jar
 
 [Install]
