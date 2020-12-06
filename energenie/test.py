@@ -3,4 +3,6 @@
 from gpiozero import Energenie
 
 lamp = Energenie(1)
-lamp.off()
+lamp.on()
+
+print("Lamp is {}".format(lamp.socket))
