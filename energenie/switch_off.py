@@ -5,8 +5,8 @@ from gpiozero import Energenie
 
 number = int(sys.argv[1])
 
-print('Turning switch {} on.'.format(number))
+print('Turning switch {} off.'.format(number))
 
 a = Energenie(number)
-a.on()
+a.off()
 
